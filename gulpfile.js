@@ -14,9 +14,9 @@ gulp.task('server', function () {
 
 // Sass компиляция
 gulp.task('sass',function(){
-    return gulp.src(['sass/**/*.sass','sass/**/*.scss'])
+    return gulp.src(['app/sass/**/*.sass','app/sass/**/*.scss'])
     .pipe(sass({outputStyle:'expanded'}).on('error',sass.logError))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('app/css'))
 });
 
 // Слежка
