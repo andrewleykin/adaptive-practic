@@ -24,10 +24,11 @@ gulp.task('watch', function () {
     gulp.watch([
         'app/*html',
         'app/css/*.css',
+        'app/sass/*.scss',
         'app/js/**/*.js'
-    ]).on('change', browserSync.reload);
+    ],['sass']).on('change', browserSync.reload);
 });
 
 
 // Запуск по умолчанию
-gulp.task('default', ['server', 'watch']);
+gulp.task('default', ['server','sass', 'watch']);
