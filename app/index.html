@@ -4,18 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <title>adaptiv-practic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--    Bower CSS-->
     
     <!--    Font Awesome-->
     <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
     <!--    Normalize-->
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
-    
+
+    <!-- Open Sans --- FONTS -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&amp;subset=cyrillic" rel="stylesheet"> -->
     <!--    Мои стили CSS-->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner clearfix">
+                    <div class="header__logo">
+                        <object data="img/logo-pink.svg" type="image/svg+xml"></object>
+                    </div>
+                    <div class="header__top-toggle"></div>
+                    <nav class="header__nav">
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Информация</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Возможности</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Отзывы</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Стоимость</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header__main">
+            <div class="container">
+                <div class="header__main-inner">
+                    <div class="header__main-download">
+                        <h2 class="header__main-title">Взгляните на жизнь иначе!</h2>
+                        <button class="header__main-button" value="Скачать приложение"></button>
+                        <div class="header__main-icons"></div>
+                        <p class="header__main-text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+                    </div>
+                    <div class="header__main-phone">
+                        <img src="img/header-iphone.png" alt="phone">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+
     <!--   Jquery-->
     <script src="bower/jquery/dist/jquery.min.js"></script>
 

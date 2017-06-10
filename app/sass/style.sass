@@ -1,0 +1,115 @@
+@import "static/smart-grid";
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: 'Open Sans', sans-serif
+
+.container 
+	width: 90%
+	margin: 0 auto
+	padding: 0 10px
+
+ul 
+	list-style: none
+
+
+a 
+	color: inherit
+	text-decoration: none
+
+
+.header 
+	background: url(../img/bg-header.jpg) no-repeat center
+	background-size: cover
+	&__top 
+		background: rgba(0,0,0,0.3)
+
+.header__top-inner 
+	+row-flex()
+	+justify-content(space-between)
+	margin-bottom: 100px
+	position: relative
+	
+
+=top-toggle
+	max-width: 50px
+	height: 5px
+	background: #fff
+
+
+
+.header__top-toggle
+	+col()
+	+col-sm-8()
+	+top-toggle()
+	cursor: pointer
+	display: none
+	+align-self(center)
+	&:after
+		+top-toggle()
+		display: block
+		content: ""
+		transform: translateY(10px)
+	&:before
+		+top-toggle()
+		display: block
+		content: ""
+		transform: translateY(-15px)
+
+
+.header__logo 
+	padding: 25px 0
+	+col()
+	+col-2()
+	+col-sm-4()
+
+.header__nav 
+	+col()
+	+col-8()
+	+col-sm-12()
+
+	margin: auto 0 auto 0
+	&-list 
+		display: flex
+		justify-content: space-around
+		
+	&-item 
+		color: white
+		
+	&-link 
+		&:hover 
+			border-bottom: 2px solid #fff
+			padding-bottom: 15px
+
+
+
+.header__main-inner 
+	+row-flex()
+	+justify-content(space-between)
+
+
+.header__main-download 
+	+col()
+	+col-4()
+	+col-md-3()
+	+col-sm-6()
+	text-align: center
+
+.header__main-title
+	color: white
+
+.header__main-phone 
+	+col()
+	+col-8()
+	+col-md-6()
+	+col-sm-4()
+
+
+
+
+
+
+
+@import "media/media";

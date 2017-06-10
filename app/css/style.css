@@ -1,231 +1,189 @@
-@charset "UTF-8";
-/*-----------------------------------*
-  $TOAST-GRID
-
-  An insane grid.
-  You'd be mad to use it.
-
-  Usage
-  =====
-
-  Assuming default values:
-
-  <div class="grid">
-    <div class="grid__col grid__col--1-of-2">
-      A half-width column.
-    </div>
-    <div class="grid__col grid__col--1-of-4 grid__col--pull-1-of-4">
-      A quarter, pulled left by its own width. You get this, right?
-    </div>
-  </div>
-
-
-  Customisation
-  =============
-
-  $toast-grid-namespace and $toast-grid-column-namespace
-  adjusts the class names for the grid. With
-  default values, grid wrappers have a class
-  of '.grid' and columns '.grid__col'.
-
-  $toast-col-groups(n) adjusts column divisions.
-  For example, $toast-col-groups(12) will produce
-  a 12-column grid. $col-groups(3,6,8)
-  will produce a 3-, 6-, and 8-column grid.
-
-  $toast-gutter-width is—you guessed it—the gutter
-  width. Accepts any unit.
-
-  That's it. Have fun.
-
-\*-----------------------------------*/
-.row {
-  list-style: none;
-  margin-left: -20px;
-}
-
-.col--2-of-2, .col--3-of-3, .col--4-of-4, .col--5-of-5, .col--6-of-6, .col--8-of-8, .col--12-of-12 {
-  width: 100%;
-}
-
-.col--1-of-2, .col--2-of-4, .col--3-of-6, .col--4-of-8, .col--6-of-12 {
-  width: 50%;
-}
-
-.col--1-of-3, .col--2-of-6, .col--4-of-12 {
-  width: 33.33333%;
-}
-
-.col--2-of-3, .col--4-of-6, .col--8-of-12 {
-  width: 66.66667%;
-}
-
-.col--1-of-4, .col--2-of-8, .col--3-of-12 {
-  width: 25%;
-}
-
-.col--3-of-4, .col--6-of-8, .col--9-of-12 {
-  width: 75%;
-}
-
-.col--1-of-5 {
-  width: 20%;
-}
-
-.col--2-of-5 {
-  width: 40%;
-}
-
-.col--3-of-5 {
-  width: 60%;
-}
-
-.col--4-of-5 {
-  width: 80%;
-}
-
-.col--1-of-6 {
-  width: 16.66667%;
-}
-
-.col--5-of-6 {
-  width: 83.33333%;
-}
-
-.col--1-of-8 {
-  width: 12.5%;
-}
-
-.col--3-of-8 {
-  width: 37.5%;
-}
-
-.col--5-of-8 {
-  width: 62.5%;
-}
-
-.col--7-of-8 {
-  width: 87.5%;
-}
-
-.col--1-of-12 {
-  width: 8.33333%;
-}
-
-.col--2-of-12 {
-  width: 16.66667%;
-}
-
-.col--5-of-12 {
-  width: 41.66667%;
-}
-
-.col--7-of-12 {
-  width: 58.33333%;
-}
-
-.col--10-of-12 {
-  width: 83.33333%;
-}
-
-.col--11-of-12 {
-  width: 91.66667%;
-}
-
-.col {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  display: inline-block;
-  margin-right: -.25em;
-  min-height: 1px;
-  padding-left: 20px;
-  vertical-align: top;
+  font-family: 'Open Sans', sans-serif;
 }
 
-@media (max-width: 700px) {
-  .col {
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-    width: auto;
-  }
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
-@media (max-width: 700px) and (min-width: 480px) {
-  .col[class*="col--m-"] {
-    display: inline-block;
-    margin-right: -.24em;
-  }
-  .col.col--m-1-of-2, .col.col--m-2-of-4 {
-    width: 50%;
-  }
-  .col.col--m-1-of-3 {
-    width: 33.33333%;
-  }
-  .col.col--m-2-of-3 {
-    width: 66.66667%;
-  }
-  .col.col--m-1-of-4 {
-    width: 25%;
-  }
-  .col.col--m-3-of-4 {
-    width: 75%;
-  }
+ul {
+  list-style: none;
 }
 
-@media (max-width: 480px) {
-  .col[class*="col--s-"] {
-    display: inline-block;
-    margin-right: -.24em;
-  }
-  .col.col--s-1-of-2, .col.col--s-2-of-4 {
-    width: 50%;
-  }
-  .col.col--s-1-of-3 {
-    width: 33.33333%;
-  }
-  .col.col--s-2-of-3 {
-    width: 66.66667%;
-  }
-  .col.col--s-1-of-4 {
-    width: 25%;
-  }
-  .col.col--s-3-of-4 {
-    width: 75%;
-  }
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.col--centered {
+.header {
+  background: url(../img/bg-header.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.header__top {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.header__top-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.header__top-toggle {
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+  max-width: 50px;
+  height: 5px;
+  background: #fff;
+  cursor: pointer;
+  display: none;
+  align-self: center;
+}
+
+.header__top-toggle:after {
+  max-width: 50px;
+  height: 5px;
+  background: #fff;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  content: "";
+  transform: translateY(10px);
 }
 
-.col--d-first {
-  float: left;
+.header__top-toggle:before {
+  max-width: 50px;
+  height: 5px;
+  background: #fff;
+  display: block;
+  content: "";
+  transform: translateY(-15px);
 }
 
-.col--d-last {
-  float: right;
+.header__logo {
+  padding: 25px 0;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+  width: calc(16.66667% - 20px);
 }
 
-.row--no-gutter {
-  margin-left: 0;
-  width: 100%;
+.header__nav {
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+  width: calc(66.66667% - 20px);
+  margin: auto 0 auto 0;
 }
 
-.row--no-gutter .col {
-  padding-left: 0;
+.header__nav-list {
+  display: flex;
+  justify-content: space-around;
 }
 
-.row--no-gutter .col--span-all {
-  margin-left: 0;
-  width: 100%;
+.header__nav-item {
+  color: white;
 }
 
-.col--ab {
-  vertical-align: bottom;
+.header__nav-link:hover {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
 }
 
-.col--am {
-  vertical-align: middle;
+.header__main-inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  justify-content: space-between;
+}
+
+.header__main-download {
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+  width: calc(33.33333% - 20px);
+  text-align: center;
+}
+
+.header__main-title {
+  color: white;
+}
+
+.header__main-phone {
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 10px;
+  word-wrap: break-word;
+  width: calc(66.66667% - 20px);
+}
+
+@media screen and (max-width: 960px) {
+  .header__main-download {
+    width: calc(25% - 20px);
+  }
+
+  .header__main-phone {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header__top-toggle {
+    width: calc(66.66667% - 20px);
+  }
+
+  .header__logo {
+    width: calc(33.33333% - 20px);
+  }
+
+  .header__nav {
+    width: calc(100% - 20px);
+  }
+
+  .header__main-download {
+    width: calc(50% - 20px);
+  }
+
+  .header__main-phone {
+    width: calc(33.33333% - 20px);
+  }
+
+  .header__nav {
+    position: absolute;
+    top: 100px;
+    display: none;
+  }
+
+  .header__nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__nav-item {
+    text-align: center;
+  }
+
+  .header__nav-link {
+    display: block;
+    padding: 15px 0;
+  }
+
+  .header__top-toggle {
+    display: block;
+    max-width: 50px;
+  }
 }
