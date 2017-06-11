@@ -121,6 +121,35 @@ a {
 
 .header__main-title {
   color: white;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+.header__main-button {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #FFF;
+  background: transparent;
+  outline: #000;
+  padding: 20px 35px;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 60px;
+  border: 3px solid #fff;
+}
+
+.header__main-icons {
+  margin-bottom: 60px;
+}
+
+.header__main-text {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #FFF;
 }
 
 .header__main-phone {
@@ -129,6 +158,91 @@ a {
   margin-right: 10px;
   word-wrap: break-word;
   width: calc(66.66667% - 20px);
+}
+
+.offer {
+  background: linear-gradient(177deg, #fff 0%, #fff 27%, #f2f2f2 27%, #f2f2f2 100%);
+}
+
+.offer__title {
+  font-size: 50px;
+  font-weight: 300;
+  margin: 85px 0;
+  text-align: center;
+  color: #283645;
+}
+
+.seo {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.seo__item {
+  width: calc(33.33333% - 20px);
+  text-align: center;
+}
+
+.seo__img {
+  margin-bottom: 65px;
+}
+
+.seo__title {
+  padding: 0 107px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-bottom: 40px;
+}
+
+.seo__text {
+  color: #283645;
+  font-size: 18px;
+  padding: 0 103px;
+}
+
+.effect {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-left: 10px;
+}
+
+.effect__img {
+  width: calc(33.33333% - 20px);
+  text-align: center;
+}
+
+.effect__inner {
+  width: calc(66.66667% - 20px);
+  padding: 0 45px;
+}
+
+.effect__title {
+  margin: 100px 0 45px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+}
+
+.effect__text {
+  margin-bottom: 50px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  width: 530px;
+}
+
+.effect__link {
+  margin-bottom: 115px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #D22856;
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 960px) {
@@ -162,19 +276,27 @@ a {
     width: calc(33.33333% - 20px);
   }
 
+  .header__top {
+    background: #283645;
+  }
+
   .header__nav {
     position: absolute;
-    top: 100px;
+    top: 90px;
     display: none;
   }
 
   .header__nav-list {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .header__nav-item {
     text-align: center;
+    width: 100%;
+    background: #283645;
+    border-bottom: 4px solid black;
   }
 
   .header__nav-link {
