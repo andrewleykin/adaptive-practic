@@ -184,6 +184,7 @@ a {
 .seo__item {
   width: calc(33.33333% - 20px);
   text-align: center;
+  width: 235px;
 }
 
 .seo__img {
@@ -191,7 +192,6 @@ a {
 }
 
 .seo__title {
-  padding: 0 107px;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -201,7 +201,6 @@ a {
 .seo__text {
   color: #283645;
   font-size: 18px;
-  padding: 0 103px;
 }
 
 .effect {
@@ -209,17 +208,14 @@ a {
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
-  padding-left: 10px;
 }
 
 .effect__img {
   width: calc(33.33333% - 20px);
-  text-align: center;
 }
 
 .effect__inner {
   width: calc(66.66667% - 20px);
-  padding: 0 45px;
 }
 
 .effect__title {
